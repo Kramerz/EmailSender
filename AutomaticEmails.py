@@ -9,17 +9,17 @@ emailGui = tkinter.Tk()
 def messageDeilver():
 
 	conn = smtplib.SMTP("smtp.gmail.com", 587)
-	sender = 'West.kramer.ryan93@gmail.com'	
-	receivers = ['Ryan.w.west@outlook.com']
-	message = """From: Ryan West <West.kramer.ryan93@gmail.com>
-To: Ryan <Ryan.w.west@outlook.com>
+	sender = 'UserPrincipalName'	
+	receivers = ['UPN']
+	message = """From: Ryan West <UPN>
+To: Ryan <UPN>
 Subject: SMTP E-mail test
 This is a test e-mail message.
 """
 	conn = smtplib.SMTP('smtp.gmail.com', 587)
 	conn.ehlo()
 	conn.starttls()
-	conn.login('West.kramer.ryan93@gmail.com', 'Peachbook453')
+	conn.login('UserPrincipalName', 'Password')
 	conn.sendmail(sender, receivers, message)
 	conn.quit()
 	
